@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Trello Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-text">
+          <h1 class="header-heading">Trello</h1>
+          <h2 class="header-sub">Log in to Continue</h2>
+        </div>
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <div class="log-sign-btn-container">
+                <button class="log-btn btn">Log in</button>
+                <button class="sign-btn btn">Sign up</button>
+              </div>
+              <div class="logout-container hidden">
+                <button class="logout-btn btn">Log out</button>
+              </div>
+
+              <!-- Sign up Form  -->
+              <div class="signup-form-container form hidden">
+                <button class="btn--close-signup-form">&times;</button>
+                <form class="signup-form">
+                  <div class="upload__column">
+                    <h3>Sign in free !</h3>
+                    <label>name</label>
+                    <input required name="name" type="text" />
+                    <label>Email</label>
+                    <input required name="Email" type="email" />
+                    <label>Gender</label>
+                    <select>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Transgender">Transgender</option>
+                      <option value="cybergender">cybergender</option>
+                      <option value="Helicopter">Helicopter</option>
+                      <option value="other">other</option>
+                    </select>
+                    <label>Password</label>
+                    <input required name="password" type="password" />
+                    <input type="submit" value="submit" class="btn-sub" />
+                  </div>
+                </form>
+              </div>
+              <!-- Log in Form  -->
+              <div class="login-form-container form hidden">
+                <button class="btn--close-login-form">&times;</button>
+                <form class="login-form">
+                  <div class="upload__column">
+                    <h3>Log in !</h3>
+                    <label>Username</label>
+                    <input
+                      placeholder="Username"
+                      required
+                      name="Username"
+                      type="text"
+                      class="input-login-username"
+                    />
+                    <label>Password</label>
+                    <input
+                      required
+                      placeholder="password"
+                      name="Password"
+                      type="Password"
+                      class="input-login-password"
+                    />
+                    <button class="login-btn-sub">submit</button>
+                    <!-- <input type="submit" value="submit" class="login-btn-sub" /> -->
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="items-container hidden">
+        <ul class="list">
+          <li class="list-item">
+            <h3 class="item-header">To do</h3>
+            <div class="results todo dropzone" id="todo">
+              <!-- <div class="result-card" id="todo">
+                <h3 class="card-header">Card header</h3>
+              </div> -->
+            </div>
+            <div class="add-card-container">
+              <div class="icon">&plus;</div>
+              <button class="btn add-card-btn" id="todo">
+                <a class="add-card-link">Add new card</a>
+              </button>
+            </div>
+          </li>
+          <li class="list-item">
+            <h3 class="item-header">Doing</h3>
+            <div class="results doing dropzone" id="doing">
+              <!-- <div class="result-card" id="doing">
+                <h3 class="card-header">Card header</h3>
+              </div> -->
+            </div>
+            <div class="add-card-container">
+              <div class="icon">&plus;</div>
+              <button class="btn add-card-btn" id="doing">
+                <a class="add-card-link">Add new card</a>
+              </button>
+            </div>
+          </li>
+          <li class="list-item">
+            <h3 class="item-header">Done</h3>
+            <div class="results done dropzone" id="done">
+              <!-- <div class="result-card" id="done">
+                <h3 class="card-header">Card header</h3>
+              </div> -->
+            </div>
+            <div class="add-card-container">
+              <div class="icon">&plus;</div>
+              <button class="btn add-card-btn" id="done">
+                <a class="add-card-link">Add new card</a>
+              </button>
+            </div>
+          </li>
+          <!-- <div class="card-modal modal hidden">
+            <button class="close-modal">&times;</button>
+
+            <h4 class="card-modal-header">Card header</h4>
+            <p class="card-modal-info">test Description</p>
+            <p class="card-modal-publisher">test publisher</p>
+          </div> -->
+        </ul>
+      </div>
+      <div class="overlay hidden"></div>
+    </div>
+    <!-- Todo form -->
+    <div class="add-card-window form todo-add hidden">
+      <button class="btn--close-modal" id="todo-btn-close-form">&times;</button>
+      <form class="todo-upload">
+        <div class="upload__column">
+          <h3 class="upload__heading">Card info</h3>
+          <label>Title</label>
+          <input placeholder="Title" required name="title" type="text" />
+          <label>Description</label>
+          <input
+            placeholder="Description"
+            required
+            name="description"
+            type="text"
+          />
+          <label>Publisher</label>
+          <input
+            placeholder="Publisher"
+            required
+            name="publisher"
+            type="text"
+          />
+          <input type="submit" placeholder="Submit" class="btn-sub" />
+        </div>
+      </form>
+    </div>
+    <!-- doing form -->
+    <div class="add-card-window form doing-add hidden">
+      <button class="btn--close-modal" id="doing-btn-close-form">
+        &times;
+      </button>
+      <form class="doing-upload">
+        <div class="upload__column">
+          <h3 class="upload__heading">Card info</h3>
+          <label>Title</label>
+          <input placeholder="Title" required name="title" type="text" />
+          <label>Description</label>
+          <input
+            placeholder="Description"
+            required
+            name="description"
+            type="text"
+          />
+          <label>Publisher</label>
+          <input
+            placeholder="Publisher"
+            required
+            name="publisher"
+            type="text"
+          />
+          <input type="submit" placeholder="Submit" class="btn-sub" />
+        </div>
+      </form>
+    </div>
+    <!-- done form -->
+    <div class="add-card-window form done-add hidden">
+      <button class="btn--close-modal" id="done-btn-close-form">&times;</button>
+      <form class="done-upload">
+        <div class="upload__column">
+          <h3 class="upload__heading">Card info</h3>
+          <label>Title</label>
+          <input placeholder="Title" required name="title" type="text" />
+          <label>Description</label>
+          <input
+            placeholder="Description"
+            required
+            name="description"
+            type="text"
+          />
+          <label>Publisher</label>
+          <input
+            placeholder="Publisher"
+            required
+            name="publisher"
+            type="text"
+          />
+          <input type="submit" placeholder="Submit" class="btn-sub" />
+        </div>
+      </form>
+    </div>
+
+    <script defer type="module" src="script.js"></script>
+  </body>
+</html>

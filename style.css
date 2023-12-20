@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  /* background-color: #f3f3f3; */
+  margin: 3rem;
+}
+
+.header-text {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  /* background-color: #444; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 5rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+}
+.header-heading {
+  font-size: 6.5rem;
+  color: #000;
+}
+
+.header-sub {
+  font-size: 2.5rem;
+  color: #5d5a5a;
+}
+.navigation {
+}
+.nav-list {
+  list-style: none;
+}
+.nav-item {
+}
+.log-btn {
+}
+.items-container {
+  background-color: green;
+  height: 50rem;
+  margin-bottom: 5rem;
+  padding: 5rem 10rem;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  position: relative;
+}
+
+.list {
+  background-color: blue;
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  /* overflow: scroll; */
+  /* flex-direction: column; */
+  justify-content: space-between;
+  padding: 3rem;
+}
+.list-item {
+  background-color: aquamarine;
+  width: 40rem;
+  height: 35rem;
+  /* position: relative; */
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 3rem;
+}
+
+.item-header {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.results {
+  border: 2px solid #000;
+  height: 15rem;
+
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.result-card {
+  border: 5px solid #000;
+  border-radius: 15px;
+  padding: 1rem;
+}
+.card-header {
+}
+.card-modal {
+}
+.card-modal-header {
+}
+.card-modal-info {
+}
+
+.add-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  align-items: center;
+}
+
+.icon {
+  font-size: 5rem;
+  width: 0rem;
+  height: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+}
+.add-card-btn {
+}
+
+.add-card-link {
+}
+
+.btn-sub {
+  margin-top: 2rem;
+}
+.footer {
+  background-color: gray;
+  color: #f3f3f3;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 108%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.add-card-window {
+}
+
+.upload__column {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10px;
+  border: none;
+  color: #f3f3f3;
+  background-color: #444;
+}
+
+.upload__btn {
+}
+
+.btn--close-modal {
+  align-self: flex-end;
+}
+
+/* TEST  */
+h2 {
+  color: #a7a3a4;
+  margin-left: 80px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.box:nth-child(3) {
+  clear: both;
+}
+.navy {
+  background-color: navy;
+}
+.red {
+  background-color: firebrick;
+}
+.green {
+  background-color: darkgreen;
+}
+.orange {
+  background-color: orange;
+}
+
+.signup-form-container,
+.login-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+.btn--close-signup-form,
+.btn--close-login-form {
+  align-self: flex-end;
+}
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+
+  background-color: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
